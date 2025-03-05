@@ -1,3 +1,6 @@
+RHallberg's personal dwmblocks build. Has programs for weather (using SMHI), volume (wireplumber), memory,  time/date, and music (using mpd)
+
+
 # dwmblocks
 Modular status bar for dwm written in c.
 # usage
