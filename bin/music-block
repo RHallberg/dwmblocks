@@ -1,0 +1,9 @@
+#!/bin/sh
+mpc -f "%title% - %artist%" | \
+awk '  BEGIN{sym["[playing]"]="";sym ["[paused]"]=""}
+       NR==1{song=$0}
+       NR==2{status=$1}
+       NR==3{v=1}
+       END{if(!v){print" ---";exit};print sym[status] " " song}
+     ' || \
+echo " ---"
