@@ -1,8 +1,4 @@
 #!/bin/sh
-
-temp=$(curl -s "https://opendata-download.smhi.se/stream?type=metobs&parameterIds=1&stationId=71002&period=latest-hour" | \
-  grep "Data från senaste timmen" | \
-  awk -F ";" '{print int($3+ 0.5)}')
-
-echo " $temp°C"
+# Get wap from https://github.com/RHallberg/wap
+echo $(wap opendata-download.smhi.se 52350 52350)
 
